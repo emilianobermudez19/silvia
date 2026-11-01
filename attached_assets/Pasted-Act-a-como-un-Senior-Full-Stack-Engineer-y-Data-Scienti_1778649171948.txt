@@ -1,0 +1,33 @@
+Actúa como un Senior Full-Stack Engineer y Data Scientist. Crea un MVP robusto en Python llamado 'Alfred Salud' que resuelva la falta de acceso médico en México. La aplicación debe integrar IA multimodal y una arquitectura de datos optimizada.
+
+1. Core de Inteligencia y Modelos:
+LLM Multimodal: Configura la integración con GPT-4o-mini o Llava vía API para procesar tanto texto como imágenes (fotos de cajas de medicina, recetas y síntomas visuales).
+
+Embeddings & Vector Database: Implementa una base de datos vectorial ligera (como ChromaDB o FAISS) para almacenar y recuperar información (RAG) de dos fuentes que el sistema debe simular/cargar:
+
+Catálogo de Medicamentos Genéricos de México (Compuestos activos).
+
+Guía de Herbolaria Mexicana de la UNAM (remedios tradicionales).
+
+2. Funcionalidades de Alto Valor:
+OCR & Interpretación: El sistema debe extraer texto de fotos de recetas (aún con letra difícil) y explicar la posología (dosis).
+
+Sustitución Inteligente: Si el usuario consulta una marca, el sistema debe usar embeddings para encontrar el compuesto activo y sugerir genéricos equivalentes.
+
+Módulo de Triage Preventivo: Lógica de atención que detecte 'Banderas Rojas'. Si hay riesgo de urgencia, debe bloquear la medicación y mostrar un botón de 'Llamada al 911' y mapa de hospitales cercanos.
+
+Recordatorios Proactivos: Un dashboard simple para programar tomas de medicamentos.
+
+3. Optimización y Ciencia de Datos:
+Eficiencia de Tokens: Implementa un decorador que cuente los tokens usados en cada consulta y sugiere respuestas concisas para ahorrar costos (Guerra de Tokens).
+
+Lógica de Herbolaria: Ante desabasto detectado, el agente debe ofrecer alternativas de medicina tradicional con disclaimers de interacciones medicamentosas.
+
+4. Interfaz y Stack:
+Frontend: Streamlit o Gradio para una interfaz rápida y móvil-friendly.
+
+Backend: FastAPI para manejar las peticiones de visión y chat.
+
+Seguridad: Un disclaimer legal prominente en el footer y en cada respuesta crítica.
+
+Entrégame una estructura de archivos clara: main.py para la lógica del servidor, vector_store.py para el manejo de embeddings, y un requirements.txt completo."
